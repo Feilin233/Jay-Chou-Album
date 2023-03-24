@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ABOUT.html */
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.5em;
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.main-nav {
+  text-align: center;
+  font-size: large;
+  border-bottom: 1px solid lightgrey;
+}
+
+.main-nav li {
+  padding: 5%;
+}
+
+.nav a:hover {
+  background-color: rgb(50, 130, 180);
+}
+
+.main-header {
+  background-image: url(Image/background.png);
+  background-size: 25em;
+  padding-bottom: 20px;
+}
+
+.name {
+  color: white;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-content {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+}
+
+.about-Jay-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 20%;
+}
+
+.main-footer {
+  background-image: url(Image/background.png);
+  background-size: 25em;
+  padding: 10px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-container ul {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.footer-container li {
+  padding: 20px;
+  display: inline;
+  margin-bottom: 0px;
+}
+
+/* INDEX.html */
+/* config button */
+.button {
+  text-align: center;
+}
+
+.button-text,
+.button-play {
+  border-radius: 0%;
+  padding: 10px;
+}
+
+.button-text:hover,
+.button-play:hover {
+  background-color: white;
+}
+
+.button-play {
+  border-radius: 100%;
+}
+
+/* Albums */
+.albums-list {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.YTbutton {
+  cursor: pointer;
+  height: 60px;
+  width: 150px;
+  float: right;
+}
+
+.YTbutton:hover {
+  background-color: white;
+}
+
+/* STORE.html */
+/* Config Album */
+.store-albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.store-album {
+  margin: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.store-album-name {
+  display: block; /* display on its own line */
+  width: 100%;
+  margin-bottom: 10px; /* space between album name and album image */
+}
+
+.store-album-price {
+  padding-right: 30px;
+  font-size: large;
+  font-weight: bold;
+  color: red;
+}
+
+.store-album-button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightcyan;
+  font-weight: bold;
+}
+
+/* Config Cart Header */
+.cart {
+  display: flex;
+  text-align: center;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 20px;
+  padding-bottom: 5px;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-image {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.cart-price {
+  width: 20%;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-quantity-input {
+  height: 50px;
+  width: 70px;
+  border-radius: 5px;
+  border: 1px solid #56ccf2;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  margin-right: 30px;
+}
+
+.cart-button-remove {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(250, 150, 150);
+  font-weight: bold;
+}
+
+.cart-button-remove:hover{
+  background-color: red;
+}
+
+.cart:last-child {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.cart:last-child .cart-header {
+  border: none;
+}
+
+/* Config Total & Purchase button */
+.cart-total {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+.cart-total-title {
+  width: 45%;
+  text-align: center;
+}
+
+.cart-total-price {
+  width: 20%;
+  text-align: center;
+}
+
+.cart-button-purchase {
+  margin: auto;  /* Center the button in quantity div */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightgreen;
+  font-weight: bold;
+}
+
+.cart-button-purchase:hover{
+  background-color: darkgreen;
+}
