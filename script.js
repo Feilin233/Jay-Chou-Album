@@ -12,8 +12,6 @@ function removeCartItem(event) {
   updateCartTotal();
 }
 
-
-
 // quantity input can't be less than 1
 var quantityInputs = document.getElementsByClassName("cart-quantity-input");
 for (var i = 0; i < quantityInputs.length; i++) {
@@ -30,42 +28,42 @@ function quantityChanged(event) {
 }
 
 // add to cart button
-var addToCartButtons = document.getElementsByClassName('store-album-button')
+var addToCartButtons = document.getElementsByClassName("store-album-button");
 for (var i = 0; i < addToCartButtons.length; i++) {
-  var button = addToCartButtons[i]
-  button.addEventListener('click', addToCartClicked)
+  var button = addToCartButtons[i];
+  button.addEventListener("click", addToCartClicked);
 }
 
 // adding album to cart
 function addToCartClicked(event) {
-  var button = event.target
-  var shopItem = button.parentElement.parentElement
-  var title = shopItem.getElementsByClassName('store-album-name')[0].innerText
-  var price = shopItem.getElementsByClassName('store-album-price')[0].innerText
-  var cover = shopItem.getElementsByClassName('store-album-cover')[0].src
-  addItemToCart(title, price, cover)
-  updateCartTotal()
+  var button = event.target;
+  var shopItem = button.parentElement.parentElement;
+  var title = shopItem.getElementsByClassName("store-album-name")[0].innerText;
+  var price = shopItem.getElementsByClassName("store-album-price")[0].innerText;
+  var cover = shopItem.getElementsByClassName("store-album-cover")[0].src;
+  addItemToCart(title, price, cover);
+  updateCartTotal();
 }
 
 // adding correct title, price, cover inside the cart
 function addItemToCart(title, price, cover) {
-  var cartRow = document.createElement('div')
-  cartRow.classList.add('cart')
-  var cartItems = document.getElementsByClassName('carts')[0]
-  var cartItemNames = cartItems.getElementsByClassName('cart-album-name')
+  var cartRow = document.createElement("div");
+  cartRow.classList.add("cart");
+  var cartItems = document.getElementsByClassName("carts")[0];
+  var cartItemNames = cartItems.getElementsByClassName("cart-album-name");
   for (var i = 0; i < cartItemNames.length; i++) {
-      if (cartItemNames[i].innerText == title) {
-          alert('This item is already added to the cart')
-          return
-      }
+    if (cartItemNames[i].innerText == title) {
+      alert("This item is already added to the cart");
+      return;
+    }
   }
   var cartRowContents = `
   <div class="cart-item cart-header">
   <img
     class="cart-image"
     src="${cover}"
-    width="200"
-    height="200"
+    width="250"
+    height="250"
   />
   <strong class="cart-album-name">${title}</strong>
 </div>
@@ -73,28 +71,36 @@ function addItemToCart(title, price, cover) {
 <div class="cart-quantity cart-header">
   <input class="cart-quantity-input" type="number" value="1" />
   <button class="cart-button-remove" role="button">REMOVE</button>
-</div>`
-  cartRow.innerHTML = cartRowContents
-  cartItems.append(cartRow)
-  cartRow.getElementsByClassName('cart-button-remove')[0].addEventListener('click', removeCartItem)
-  cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+</div>`;
+  cartRow.innerHTML = cartRowContents;
+  cartItems.append(cartRow);
+  cartRow
+    .getElementsByClassName("cart-button-remove")[0]
+    .addEventListener("click", removeCartItem);
+  cartRow
+    .getElementsByClassName("cart-quantity-input")[0]
+    .addEventListener("change", quantityChanged);
 }
 
-
-
 // Purchase button
-document.getElementsByClassName('cart-button-purchase')[0].addEventListener('click', purchaseClicked)
+document
+  .getElementsByClassName("cart-button-purchase")[0]
+  .addEventListener("click", purchaseClicked);
 // Purchase button - popup message
 function purchaseClicked() {
-   alert('Thank you for your purchase')
-   var cartItems = document.getElementsByClassName('carts')[0]
-   while (cartItems.hasChildNodes()) {
-       cartItems.removeChild(cartItems.firstChild)
-   }
-   updateCartTotal()
- }
-
-
+  var cartItems = document.getElementsByClassName("carts")[0];
+  if (cartItems.hasChildNodes()) {
+    alert("Thank you for your purchase");
+    while (cartItems.hasChildNodes()) {
+      cartItems.removeChild(cartItems.firstChild);
+    }
+  } else {
+    alert(
+      "Your cart is empty. Please add items to your cart before making a purchase."
+    );
+  }
+  updateCartTotal();
+}
 
 // Cart total price
 function updateCartTotal() {
@@ -114,4 +120,54 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
+}
+
+// index.html - toggle button to display playlist
+function toggle1() {
+  var x = document.getElementById("YT1");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function toggle2() {
+  var x = document.getElementById("YT2");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function toggle3() {
+  var x = document.getElementById("YT3");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function toggle4() {
+  var x = document.getElementById("YT4");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function toggle5() {
+  var x = document.getElementById("YT5");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+function toggle6() {
+  var x = document.getElementById("YT6");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }

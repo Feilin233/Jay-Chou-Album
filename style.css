@@ -9,6 +9,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-image: url("Image/bgc.png");
+  background-size: cover;
 }
 
 button {
@@ -101,24 +103,28 @@ button {
 /* config button */
 .button {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.button-text,
-.button-play {
+.button-text {
   border-radius: 0%;
-  padding: 10px;
+  padding: 1rem;
+  margin-left: 100px;
 }
 
-.button-text:hover,
-.button-play:hover {
+.button-text:hover {
   background-color: white;
 }
 
 .button-play {
-  border-radius: 100%;
+  margin-left: 1rem;
 }
 
 /* Albums */
+.albums{
+  font-size: large;
+}
 .albums-list {
   padding: 0.5em;
   margin: 0.5em;
@@ -129,6 +135,7 @@ button {
   height: 60px;
   width: 150px;
   float: right;
+  font-size: large;
 }
 
 .YTbutton:hover {
@@ -218,7 +225,7 @@ button {
   font-weight: bold;
 }
 
-.cart-button-remove:hover{
+.cart-button-remove:hover {
   background-color: red;
 }
 
@@ -251,13 +258,20 @@ button {
 }
 
 .cart-button-purchase {
-  margin: auto;  /* Center the button in quantity div */
+  margin: auto; /* Center the button in quantity div */
   padding: 10px;
   border-radius: 5px;
   background-color: lightgreen;
   font-weight: bold;
 }
 
-.cart-button-purchase:hover{
+.cart-button-purchase:hover {
   background-color: darkgreen;
+}
+
+/* remove album playlist first on loading website */
+#YT1, #YT2,#YT3, #YT4,#YT5,#YT6{
+  display: none;
+  margin-top: 1rem;
+  margin-left: 100px;
 }

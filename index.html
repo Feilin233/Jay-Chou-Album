@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jay Chou</title>
+    <link rel="shortcut icon" href="Image/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" async></script>
   </head>
   <body>
     <section>
@@ -20,8 +21,18 @@
         </nav>
         <h1 class="name">Jay Chou</h1>
         <div class="button">
-          <button class="button-text" type="button">Latest Live Albums</button>
-          <button class="button-play" type="button">&#9658;</button>
+          <a
+            href="https://en.wikipedia.org/wiki/Jay_Chou_discography"
+            target="_blank"
+            ><button class="button-text" type="button">
+              Latest Live Albums
+            </button></a
+          >
+          <audio
+            class="button-play"
+            controls
+            src="Audio/Greatest_Works_of_Art.mp3"
+          ></audio>
         </div>
       </header>
     </section>
@@ -32,72 +43,163 @@
       <div class="albums">
         <div class="albums-list">
           <strong>The One Concert</strong>
-          <button class="YTbutton" type="button">BUY TICKET</button>
+          <button onclick="toggle1()" class="YTbutton" type="button">
+            Play
+          </button>
           <br />
           <span>Released: 21 October 2002</span>
           <br />
           <span>Label: BMG, Alfa Music</span>
-          <br />
+          <iframe
+            id="YT1"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/tw/album/the-one-%E5%91%A8%E6%9D%B0%E5%80%AB%E6%BC%94%E5%94%B1%E6%9C%83/536686684"
+          ></iframe>
+
           <br />
           <hr />
         </div>
         <div class="albums-list">
           <strong>2004 Incomparable Concert</strong>
-          <button class="YTbutton" type="button">BUY TICKET</button>
+          <button onclick="toggle2()" class="YTbutton" type="button">
+            Play
+          </button>
           <br />
           <span>Released: 3 December 2004</span>
           <br />
           <span>Label: Sony Music Taiwan, Alfa Music</span>
+          <iframe
+            id="YT2"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/tw/album/2004-%E7%84%A1%E8%88%87%E5%80%AB%E6%AF%94%E6%BC%94%E5%94%B1%E6%9C%83-live/535913600"
+          ></iframe>
 
-          <br />
           <br />
           <hr />
         </div>
         <div class="albums-list">
           <strong>2007 the World Tours</strong>
-          <button class="YTbutton" type="button">BUY TICKET</button>
+          <button onclick="toggle3()" class="YTbutton" type="button">
+            Play
+          </button>
           <br />
           <span>Released: 31 January 2008</span>
           <br />
           <span>Label: JVR Music</span>
+          <iframe
+            id="YT3"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/tw/album/%E5%91%A8%E6%9D%B0%E5%80%AB2007%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83/536743616"
+          ></iframe>
 
-          <br />
           <br />
           <hr />
         </div>
         <div class="albums-list">
           <strong>The Era 2010 World Tour</strong>
-          <button class="YTbutton" type="button">BUY TICKET</button>
+          <button onclick="toggle4()" class="YTbutton" type="button">
+            Play
+          </button>
           <br />
           <span>Released: 25 January 2011</span>
           <br />
           <span>Label: JVR Music</span>
+          <iframe
+            id="YT4"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/tw/album/%E8%B6%85%E6%99%82%E4%BB%A3%E6%BC%94%E5%94%B1%E6%9C%83/536637791"
+          ></iframe>
 
-          <br />
           <br />
           <hr />
         </div>
         <div class="albums-list">
           <strong>Opus Jay World Tour</strong>
-          <button class="YTbutton" type="button">BUY TICKET</button>
+          <button onclick="toggle5()" class="YTbutton" type="button">
+            Play
+          </button>
           <br />
           <span>Released: 10 May 2016</span>
           <br />
           <span>Label: JVR Music</span>
+          <iframe
+            id="YT5"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/tw/album/%E9%AD%94%E5%A4%A9%E5%80%AB%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83-live/1108410359"
+          ></iframe>
 
-          <br />
           <br />
           <hr />
         </div>
         <div class="albums-list">
           <strong>The Invincible Concert Tour</strong>
-          <button class="YTbutton" type="button">BUY TICKET</button>
+          <button onclick="toggle6()" class="YTbutton" type="button">
+            Play
+          </button>
           <br />
           <span>Released: 1 November 2019</span>
           <br />
           <span>Label: JVR Music</span>
+          <iframe
+            id="YT6"
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="450"
+            style="
+              width: 100%;
+              max-width: 660px;
+              overflow: hidden;
+              border-radius: 10px;
+            "
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/tw/album/%E5%91%A8%E6%9D%B0%E5%80%AB%E5%9C%B0%E8%A1%A8%E6%9C%80%E5%BC%B7%E4%B8%96%E7%95%8C%E5%B7%A1%E8%BF%B4%E6%BC%94%E5%94%B1%E6%9C%83-live/1485210180"
+          ></iframe>
 
-          <br />
           <br />
         </div>
       </div>
